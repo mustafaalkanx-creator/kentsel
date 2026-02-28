@@ -645,8 +645,8 @@
 
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-gray-100">
-                    <form name="kentsel-iletisim" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
-                        <input type="hidden" name="form-name" value="kentsel-iletisim" />
+                    <form name="iletisim-formu" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" class="space-y-6">
+                        <input type="hidden" name="form-name" value="iletisim-formu" />
                         <p class="hidden">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
@@ -812,7 +812,7 @@
         });
 
         // Form submission success message
-        const form = document.querySelector('form[name="kentsel-iletisim"]');
+        const form = document.querySelector('form[name="iletisim-formu"]');
         if (form) {
             form.addEventListener('submit', (e) => {
                 // Netlify handles the form submission automatically
