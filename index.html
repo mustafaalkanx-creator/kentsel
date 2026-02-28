@@ -71,7 +71,7 @@
                     <svg class="w-8 h-8 text-navy-600" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 3L2 9v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9l-10-6zm8 16H4v-9l8-4.5 8 4.5v9zm-8-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
                     </svg>
-                    <span class="text-2xl font-bold text-navy-700">KENT İNŞAAT</span>
+                    <span class="text-2xl font-bold text-navy-700">BAÇK İNŞAAT</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#anasayfa" class="text-gray-700 hover:text-gold-600 transition">Anasayfa</a>
@@ -645,8 +645,8 @@
 
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-gray-100">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
-                        <input type="hidden" name="form-name" value="contact" />
+                    <form name="kentsel-iletisim" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+                        <input type="hidden" name="form-name" value="kentsel-iletisim" />
                         <p class="hidden">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
@@ -773,7 +773,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 Kent İnşaat. Tüm hakları saklıdır.</p>
+                <p>&copy; 2024 Baçk İnşaat. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
@@ -812,13 +812,10 @@
         });
 
         // Form submission success message
-        const form = document.querySelector('form[name="contact"]');
+        const form = document.querySelector('form[name="kentsel-iletisim"]');
         if (form) {
             form.addEventListener('submit', (e) => {
-                // Netlify handles the form submission, but we can add a custom message
-                setTimeout(() => {
-                    alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
-                }, 100);
+                // Netlify handles the form submission automatically
             });
         }
 
