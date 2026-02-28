@@ -682,7 +682,7 @@
 
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-gray-100">
-                    <form name="iletisim-formu" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6">
+                    <form name="iletisim-formu" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/tesekkurler.html" class="space-y-6">
                         <input type="hidden" name="form-name" value="iletisim-formu" />
                         <p class="hidden">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -880,47 +880,8 @@
             });
         });
 
-        // Success Modal Functions
-        function showSuccessModal() {
-            document.getElementById('success-modal').classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSuccessModal() {
-            document.getElementById('success-modal').classList.remove('show');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Form submission handling
-        const form = document.querySelector('form[name="iletisim-formu"]');
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const formData = new FormData(form);
-
-                fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
-                })
-                .then(() => {
-                    form.reset();
-                    showSuccessModal();
-                })
-                .catch((error) => {
-                    alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-                    console.error('Form submission error:', error);
-                });
-            });
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('success-modal')?.addEventListener('click', (e) => {
-            if (e.target.id === 'success-modal') {
-                closeSuccessModal();
-            }
-        });
+        // Netlify Forms handles submission natively
+        // No JavaScript override needed
 
         // Navbar background on scroll
         const nav = document.querySelector('nav');
